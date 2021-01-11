@@ -38,7 +38,7 @@ console.log(publicDir);
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather Application - Home Page',
+        title: 'Weather',
         name: 'Paulina Okulska'
     });
 });

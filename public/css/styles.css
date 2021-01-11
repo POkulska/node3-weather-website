@@ -42,6 +42,10 @@ h1 {
     flex-grow: 1;
 }
 
+.highlight {
+    font-weight: 700;
+}
+
 input {
     border: 1px solid #ccc;
     padding: 8px;
