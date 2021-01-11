@@ -12,11 +12,11 @@ const port = process.env.PORT ||  3000 ;
 //define paths for express config
 
 const __dirname = path.resolve();
-console.log('dirname:',__dirname);
+// console.log('dirname:',__dirname);
 const publicDir = path.join(__dirname, './public/');
-console.log('public',publicDir);
+// console.log('public',publicDir);
 const viewsPath = path.join(publicDir, '../templates/views');
-console.log('views',viewsPath);
+// console.log('views',viewsPath);
 
 const partialsPath = path.join(publicDir, '../templates/partials')
 
@@ -33,7 +33,7 @@ hbs.registerPartials(partialsPath)
 //setup static directory to serve
 //app.use(express.static('public/')) //basically defines the root
 app.use(express.static(publicDir)) //because didn work with dynamic dirname
-console.log(publicDir);
+// console.log(publicDir);
 
 
 app.get('', (req, res) => {
