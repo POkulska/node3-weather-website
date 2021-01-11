@@ -28,16 +28,16 @@
 
 
 
-fetch('/weather?address=boston').then((response) => {
-    response.json().then((data) => {
-        if (data.error) {
-            console.log(data.error);
-        } else {
-            console.log(data.location);
-            console.log(data.forecast);
-        }
-    })
-});
+// fetch('/weather?address=boston').then((response) => {
+//     response.json().then((data) => {
+//         if (data.error) {
+//             console.log(data.error);
+//         } else {
+//             console.log(data.location);
+//             console.log(data.forecast);
+//         }
+//     })
+// });
 
 
 
@@ -54,7 +54,7 @@ weatherForm.addEventListener('submit', (ev) => {
     const location = searchElement.value;
     messageOne.textContent = "Loading...";
     messageTwo.textContent = '';
-    fetch(`http://localhost:3000/weather?address=${location}`).then((response) => {
+    fetch(`/weather?address=${location}`).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 messageOne.TextContent = data.error;
