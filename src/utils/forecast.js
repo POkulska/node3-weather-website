@@ -14,7 +14,7 @@ const forecast = (lat, long, callback) => {
             callback(`Unable to find the location. Error message: ${body.error.info}`)
         } 
         else {
-            callback(undefined,`${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature} degrees out. There perceivable temperature though is ${body.current.feelslike} degrees` )            
+            callback(undefined,`${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature} degrees out. The apparent temperature though is ${body.current.feelslike} degrees. Air humidity of ${body.current.humidity}%. Atmospheric pressure for today - ${body.current.pressure} hPa. Wind speed at the moment is ${body.current.wind_speed} km/h in the direction of ${body.current.wind_dir}. Cloud cover ${body.current.cloudcover}%. Have a lovely day!` )            
         }
     })
 }

@@ -113,7 +113,7 @@ app.get('/weather', (req, res) => {
     } = {}) => {
         if (error) {
             return res.send({
-                error: 'something went wrong. unable to find the location - try another search'
+                error: 'Something went wrong. unable to find the location - try another search.'
             })
         }
         forecast(longitude, latitude, (error, forecastData) => {
