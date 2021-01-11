@@ -7,12 +7,13 @@ import {
 } from './utils/forecast.js';
 
 const app = express();
+const port = process.env.PORT ||  3000 ;
 
 //define paths for express config
 
 const __dirname = path.resolve();
 console.log('dirname:',__dirname);
-const publicDir = path.join(__dirname, '../public/');
+const publicDir = path.join(__dirname, './public/');
 console.log('public',publicDir);
 const viewsPath = path.join(publicDir, '../templates/views');
 console.log('views',viewsPath);
@@ -165,6 +166,10 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('server is up on port 3000');
+app.listen(port, () => {
+    console.log(`server is up on port 3000 ${port}`);
 })
+
+// app.listen(3000, () => {
+//     console.log('server is up on port 3000');
+// })
